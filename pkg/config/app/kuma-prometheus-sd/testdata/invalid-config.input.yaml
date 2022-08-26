@@ -1,0 +1,6 @@
+monitoringAssignment:
+  client:
+    name:
+    url: invalid-url
+prometheus:
+  outputFile:

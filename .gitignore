@@ -1,0 +1,14 @@
+# IDE: Goland
+.idea/
+
+# IDE: VS Code
+.vscode/
+
+# CI
+build/
+
+# macOS
+.DS_Store
+
+# Release artifacts
+.cr-release-packages

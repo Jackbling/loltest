@@ -1,0 +1,15 @@
+FROM alpine:3.15.4
+
+ARG ARCH
+
+ADD /build/artifacts-linux-$ARCH/kuma-prometheus-sd/kuma-prometheus-sd /usr/bin
+
+COPY /tools/releases/templates/LICENSE \
+    /tools/releases/templates/README \
+    /kuma/
+
+COPY /tools/releases/templates/NOTICE /kuma/
+
+USER nobody:nobody
+
+ENTRYPOINT ["kuma-prometheus-sd"]

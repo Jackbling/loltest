@@ -1,0 +1,22 @@
+{
+    "total": 2,
+    "items": [
+        {
+            "type": "TrafficRoute",
+            "mesh": "default",
+            "name": "one",
+            "path": "/example",
+            "creationTime": "2018-07-17T16:05:36.995Z",
+            "modificationTime": "2019-07-17T16:05:36.995Z"
+        },
+        {
+            "type": "TrafficRoute",
+            "mesh": "demo",
+            "name": "two",
+            "path": "/another",
+            "creationTime": "2018-07-17T16:05:36.995Z",
+            "modificationTime": "2019-07-17T16:05:36.995Z"
+        }
+    ],
+    "next": null
+}

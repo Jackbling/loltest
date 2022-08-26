@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package kuma.mesh.v1alpha1;
+
+option go_package = "github.com/kumahq/kuma/api/mesh/v1alpha1";
+
+import "google/protobuf/timestamp.proto";
+import "envoy/service/discovery/v3/discovery.proto";
+import "google/protobuf/any.proto";
+
+service KumaDiscoveryService {
+  rpc StreamKumaResources(stream envoy.service.discovery.v3.DiscoveryRequest)
+      returns (stream envoy.service.discovery.v3.DiscoveryResponse);
+}
+
+message KumaResource {
+  message Meta {
+    string name = 1;
+    string mesh = 2;
+    google.protobuf.Timestamp creation_time = 3;
+    google.protobuf.Timestamp modification_time = 4;
+    string version = 5;
+  }
+  Meta meta = 1;
+  google.protobuf.Any spec = 2;
+}
